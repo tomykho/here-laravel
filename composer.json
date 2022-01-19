@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "tomykho/here-laravel",
+    "description": "This is my package here-laravel",
     "keywords": [
-        ":vendor_name",
+        "tomykho",
         "laravel",
-        ":package_slug"
+        "here-laravel"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/tomykho/here-laravel",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Tomy Kho",
+            "email": "mail@tomykho.dev",
             "role": "Developer"
         }
     ],
@@ -22,25 +22,21 @@
     },
     "require-dev": {
         "nunomaduro/collision": "^5.10",
-        "nunomaduro/larastan": "^1.0",
         "orchestra/testbench": "^6.22",
         "pestphp/pest": "^1.21",
         "pestphp/pest-plugin-laravel": "^1.1",
-        "phpstan/extension-installer": "^1.1",
-        "phpstan/phpstan-deprecation-rules": "^1.0",
-        "phpstan/phpstan-phpunit": "^1.0",
         "phpunit/phpunit": "^9.5",
         "spatie/laravel-ray": "^1.26"
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "TomyKho\\Here\\": "src",
+            "TomyKho\\Here\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "TomyKho\\Here\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -49,15 +45,18 @@
         "test-coverage": "vendor/bin/pest coverage"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": false
+        }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "TomyKho\\Here\\HereServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "Here": "TomyKho\\Here\\Facades\\Here"
             }
         }
     },

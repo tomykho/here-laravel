@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace TomyKho\Here;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use VendorName\Skeleton\Commands\SkeletonCommand;
+use TomyKho\Here\Commands\HereCommand;
 
-class SkeletonServiceProvider extends PackageServiceProvider
+class HereServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
@@ -16,10 +16,10 @@ class SkeletonServiceProvider extends PackageServiceProvider
          * More info: https://github.com/spatie/laravel-package-tools
          */
         $package
-            ->name('skeleton')
+            ->name('here-laravel')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_skeleton_table')
-            ->hasCommand(SkeletonCommand::class);
+            ->hasMigration('create_here-laravel_table')
+            ->hasCommand(HereCommand::class);
     }
 }
