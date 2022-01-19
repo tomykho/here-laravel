@@ -30,7 +30,6 @@ class Here
                 }
             }
         }
-        \Log::info($connection);
         if (!$value) {
             $response = Http::get(self::HERE_GEOCODE_URL, [
                 'apiKey' => config('here-laravel.api_key'),
