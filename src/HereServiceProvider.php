@@ -18,8 +18,6 @@ class HereServiceProvider extends PackageServiceProvider
         $package
             ->name('here-laravel')
             ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_here-laravel_table')
             ->hasCommand(HereCommand::class);
     }
 }

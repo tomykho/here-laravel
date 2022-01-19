@@ -23,13 +23,6 @@ You can install the package via composer:
 composer require tomykho/here-laravel
 ```
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="here-laravel-migrations"
-php artisan migrate
-```
-
 You can publish the config file with:
 
 ```bash
@@ -40,20 +33,50 @@ This is the contents of the published config file:
 
 ```php
 return [
+
+    /*
+    |-----------------------------------------------------------------------
+    | API Key
+    |-----------------------------------------------------------------------
+    |
+    | Specify API Key provided by Here.
+    |
+    */
+    'api_key' => env('HERE_API_KEY'),
+
+    'cache' => [
+        /*
+        |-----------------------------------------------------------------------
+        | Cache Connection
+        |-----------------------------------------------------------------------
+        |
+        | Specify the cache database connection to use for caching.
+        |
+        | Default: null
+        |
+        */
+        'connection' => null,
+
+        /*
+        |-----------------------------------------------------------------------
+        | Cache Duration
+        |-----------------------------------------------------------------------
+        |
+        | Specify the cache duration in seconds.
+        |
+        | Default: 1 day (string)
+        |
+        */
+        'duration' => '1 year',
+    ],
 ];
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="here-laravel-views"
 ```
 
 ## Usage
 
 ```php
-$here = new TomyKho\Here();
-echo $here->echoPhrase('Hello, TomyKho!');
+$query = new GeocodeQuery(postalCode: '218696', country: 'Singapore');
+$items = Here::geocode($query);
 ```
 
 ## Testing
