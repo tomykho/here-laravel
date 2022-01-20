@@ -32,9 +32,9 @@ return [
         |
         | Specify the cache duration in seconds.
         |
-        | Default: 1 day (string)
+        | Default: 60 * 60 * 24 * 7 (string)
         |
         */
-        'duration' => '1 year',
+        'duration' => 60 * 60 * 24 * 7 // 1 week,
     ],
 ];
