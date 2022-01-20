@@ -31,7 +31,6 @@ class Here
             ]);
             $value = $response->json();
             $value['query'] = $query->toArray();
-            $value['requested_at'] = now()->toISOString();
             if ($redis) {
                 $redis->set($key, json_encode($value), 'EX', config('here-laravel.cache.duration'));
             }
