@@ -1,12 +1,12 @@
 {
-    "name": "tomykho/here-laravel",
-    "description": "This is my package here-laravel",
+    "name": "tomykho/laravel-here",
+    "description": "This is my package laravel-here",
     "keywords": [
         "tomykho",
         "laravel",
-        "here-laravel"
+        "here"
     ],
-    "homepage": "https://github.com/tomykho/here-laravel",
+    "homepage": "https://github.com/tomykho/laravel-here",
     "license": "MIT",
     "authors": [
         {
