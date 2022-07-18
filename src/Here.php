@@ -30,7 +30,6 @@ class Here
                 'qq' => $qq,
             ]);
             $value = $response->json();
-            $value['query'] = $query->toArray();
             if ($redis) {
                 $redis->set($key, json_encode($value), 'EX', config('here-laravel.cache.duration'));
             }
