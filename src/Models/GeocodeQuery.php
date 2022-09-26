@@ -16,7 +16,12 @@ final class GeocodeQuery
         ];
     }
 
-    public function value()
+    public function q()
+    {
+        return $this->country . ' ' . $this->postalCode;
+    }
+
+    public function qq()
     {
         $value = '';
         $array = $this->toArray();
